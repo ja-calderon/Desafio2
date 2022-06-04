@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio 2</title>
+    <link rel="stylesheet" href="./css/estilo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="./js/funciones.js" defer></script>
+    <script
+      type="text/javascript"
+      src="https://kit.fontawesome.com/2c36e9b7b1.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body>
+    <header>
+      <img src="./img/logo.png" alt="logo" />
+    </header>
+    <main>
+      <section class="paginainicio" id="inicio">
+        <div class="botonesinicio">
+          <button
+            class="iniciarjuego"
+            type="button"
+            onclick="iniciojuego(palabras)"
+          >
+            Iniciar Juego
+          </button>
+          <button
+            class="agregarpalabra"
+            type="button"
+            onclick="botonagregarpalabra()"
+          >
+            Agregar nueva palabra
+          </button>
+        </div>
+      </section>
+
+      <section class="cargapalabra" id="carga">
+        <form action="" class="formulario" id="formulario">
+          <div class="formulario-grupo" id="grupoinput">
+            <div id="formulario-grupoinput" class="formulario-grupoinput">
+              <input
+                type="text"
+                class="entrada"
+                id="entrada"
+                placeholder="Ingrese una palabra"
+                name="palabra"
+                required
+              />
+              <i class="formulario-input fas fa-times-circle fa-2x"></i>
+            </div>
+            <p class="formulario-error">
+              Utilice solo Mayusculas (Max. 8 dígitos)
+            </p>
+            <div class="botonescarga">
+              <button type="submit" class="boton" id="boton">
+                Guardar y Empezar
+              </button>
+              <button type="button" onclick="botoncancelar()">Cancelar</button>
+            </div>
+          </div>
+        </form>
+      </section>
+      <section class="juego" id="juego">
+        <div id="contenedorusadas">
+          <canvas width="1200" height="800" id="plano"></canvas>
+          <div class="mensaje">
+            <span id="mensajeJuego"></span>
+            <input type="text" id="inputjuego" name="inputjuego" />
+        </div>
+        </div>
+        
+        <div class="palabrajuego">
+          <div id="contenedordeletras"></div>
+        </div>
+        <div id="contenedorletrasusadas"> <span id="letrasusadas"></span></div>
+        <div class="botones">
+          <button type="button" onclick="botoncancelar()" class="botonnuevojuego">Nuevo Juego</button>
+          <button type="button" onclick="desistir()">Desistir</button>
+        </div>
+
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2022 Juan Calderon</p>
+    </footer>
+  </body>
+</html>
